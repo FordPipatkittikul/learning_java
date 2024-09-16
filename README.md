@@ -10,7 +10,7 @@ Variables that belong to an object are usually called **attributes**
 # Constructors
 
 # Static
-The static keyword is a non-access modifier used for methods and attributes. 
+**The static keyword** is a non-access modifier used for methods and attributes. 
 Static methods/attributes can be accessed without creating an object of a class.
 
 
@@ -25,9 +25,9 @@ An object is created from a class.
 **instantiate** create an instance of a class.
 
 # private and public
+**private** can only be accessed within same class
 
-private can only be accessed within same class
-public can be accessed within same class or different class
+**public** can be accessed within same class or different class
 
 
 # Packages
