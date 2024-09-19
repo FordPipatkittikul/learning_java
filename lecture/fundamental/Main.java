@@ -1,9 +1,10 @@
-import fundamental.Account;
+package fundamental;
+
 import java.time.LocalDate;
 // import java.time.*;  import all classes in this packages
 
 public class Main {
-    public static void main(String args) {
+    public static void main(String[] args) {
 
         // instance
         Account account1 = new Account();
