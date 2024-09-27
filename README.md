@@ -21,9 +21,9 @@ Variables that belong to an object are usually called **attributes**
 keyword to control the visibility and accessibility of the class members.
 
 1) Public : Accessible from anywhere within the program.
-2) Private : Accessible from anywhere within the same class
-3) Protected : Accessible from anywhere the same package and its subclasses outside the package
-4) Default : No modifier. Accessible from anywhere within the same package
+2) Protected : Accessible from anywhere the same package and its subclasses outside the package
+3) Default : No modifier. Accessible from anywhere within the same package
+4) Private : Accessible from anywhere within the same class
 
 ## Static
 
@@ -63,13 +63,6 @@ An object is created from a class.
 **instantiate** create an instance of a class.
 
 Are mutable by default
-
-# private and public
-
-**private** can only be accessed within same class
-
-**public** can be accessed within same class or different class
-
 
 # Packages
 
@@ -163,3 +156,8 @@ Do-while loop  allows a program  to repeatedly execute block of code as long as 
     for (String i : cars) {
         System.out.println(i);
     }
+
+
+# intelliJ syntax shortcut and Trucks
+
+    psvm create main method
