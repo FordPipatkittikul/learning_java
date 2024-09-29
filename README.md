@@ -152,7 +152,7 @@ Static members with the same name in parent and child class.
 
 # Interfaces
 https://www.w3schools.com/java/java_interface.asp
-Contract for a class what specifies which methods a class should have
+Contract for a class what specifies which methods a class should have.
 Most interface method does not have a body, but It can have a body
 
 ## default method
@@ -180,6 +180,19 @@ Abstract class: is a restricted class that cannot be used to create objects or i
 Abstract method: can only be used in an abstract class, and it does not have a body. 
 The body is provided by the subclass (inherited from). Abstract method can be only exist in abstract class.
 
+# Generics and collections
+
+generic can be replaced by any object type not primitive type. For type safety
+
+Collections allow us to store more than one value in one variable.
+Collection Framework provides a set of interfaces and classes that can be used to store
+and manipulate collections of object.
+    
+    We can not instantiate bc it is interface
+    1) List: we need to specify the type of List content
+    2) Set: unordered and the elements don't have an index
+    3) Queue: add to the end and remove from the front ex. line of shopping.(FIFO)
+    4) Map
 
 # Enums
 https://www.w3schools.com/java/java_enums.asp
@@ -194,6 +207,32 @@ Enums with member
 # post-increment and pre-increment
 1) Pre-increment ( ++i ) increases the value of i before the value is used in an expression.
 2) Post-increment ( i++ ) increases the value after the expression is evaluated.
+
+# Exceptions
+https://www.w3schools.com/java/java_try_catch.asp
+When an error occurs, Java will normally stop and generate an error message. 
+The technical term for this is: Java will throw an exception (throw an error).
+2 types of exception : checked and unchecked exceptions.
+check exceptions we need to handle it ourselves.
+uncheck exceptions are not handled
+type of exception: https://www.geeksforgeeks.org/types-of-exception-in-java-with-examples/
+    
+    throw new Exception("Exception message");
+    
+    two ways handling exception is throw and try catch
+    
+    public void readFile() throws IOException {
+        // code that may throw IOException
+    }
+    
+    try{
+    
+    }catch(Exception e){
+    
+    }
+
+# Reading and Writing Files
+
 
 # Switch Statement
 
