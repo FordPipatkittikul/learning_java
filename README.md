@@ -37,13 +37,13 @@ Best practice: choose the most restrictive access modifier that is appropriate
 3) Default : No modifier. Accessible from anywhere within the same package
 4) Private : Accessible from anywhere within the same class
 
-## Static
+### Static
 
 **The static keyword** is a non-access modifier used for methods and attributes.
 Static methods/attributes can be accessed without creating an object of a class.
 because It belongs to the class.
 
-## final
+### final
 - When class is final, it cannot be extended.
 - When method is final, it cannot be overridden.
 - final variable can only be assign value once.
@@ -52,11 +52,11 @@ https://www.w3schools.com/java/java_modifiers.asp
 
 # Method
 
-## return type
+### return type
     
     void : return nothing
 
-## parameter and argument
+### parameter and argument
 
     public class Main {
         static void myMethod(String fname) { // parameters
@@ -71,7 +71,7 @@ https://www.w3schools.com/java/java_modifiers.asp
     
     }
 
-## getter and setter method
+### getter and setter method
 
     The get method returns the variable value, and the set method sets the value.
     https://www.w3schools.com/java/java_encapsulation.asp
@@ -117,7 +117,7 @@ not whether their contents are equal.
 - UpperCase is a reference type
 - Lowercase is a primitive type
 
-## casting
+### casting
 
 Two types of casting:
 1) Widening Casting (automatically) - converting a smaller type to a larger type size
@@ -126,25 +126,25 @@ https://www.w3schools.com/java/java_type_casting.asp
 
 # OOP
 
-## Inheritance
+### Inheritance
 The ability of a class to inherit properties and methods from a parent class.
 Benefit: avoid duplicate code
 
-## Encapsulation
+### Encapsulation
 Binding all data and methods together in one object.
 Benefit: make sure that "sensitive" data is hidden from users.
 https://www.w3schools.com/java/java_encapsulation.asp
 
-## Abstraction
+### Abstraction
 abstract all the difficult things. Only show user necessary things. hiding away the unnecessary details.
 
-## Polymorphism
+### Polymorphism
 Many forms. Methods with the same name that can be executed on many objects or classes.
 
-## hiding
+### hiding
 Static members with the same name in parent and child class.
 
-## Overriding, Overloading and Hiding
+### Overriding, Overloading and Hiding
 
 @override
 **Overriding** : new implementation for a method that is inherited from a parent class.
@@ -155,7 +155,10 @@ https://www.w3schools.com/java/java_interface.asp
 Contract for a class what specifies which methods a class should have.
 Most interface method does not have a body, but It can have a body
 
-## default method
+When you implement an interface in Java, 
+you must provide implementations for all the abstract methods declared in that interface.
+
+### default method
 It is a method that has a default implementation in the interface.
 Class that implement an interface with a default body, don't need to
 implement the default methods. But It is allowed to override it.
@@ -168,6 +171,13 @@ implement the default methods. But It is allowed to override it.
         }
     }
 
+### functional interfaces
+Functional interfaces can have more than one method, but only one abstract method.
+    
+    @FunctionalInterface
+    public interface Calculator {
+        int calculate(int a, int b);
+    }
 
 # Abstract
 https://www.w3schools.com/java/java_abstract.asp
@@ -203,6 +213,46 @@ can be compared by == syntax.
 Enums with member
 
 ![enums.png](enums.png)
+
+# lambda expressions
+A lambda expression is a way of implementing a functional interface
+https://www.w3schools.com/java/java_lambda.asp
+
+Variable using in lambda expression should be final or effectively final.
+
+
+## useful built in functional expressions
+1. Consumer<T>
+   T get()
+   Purpose: Represents an operation that accepts a single input argument and returns no result.
+   
+   Consumer<String> greet = name -> System.out.println("Hello, " + name + "!");
+   greet.accept("Alice"); // Output: Hello, Alice!
+
+2. Predicate<T>
+   Purpose: Represents a predicate (boolean-valued function) that accepts a single input argument.
+   
+   Predicate<Integer> isEven = n -> n % 2 == 0;
+   System.out.println(isEven.test(4)); // Output: true
+
+# Streams API & functional programming
+Stream: A sequence of elements from a data source (e.g., collections, arrays) 
+that can be processed in a pipeline.
+
+A functional programming approach to process collections of data. 
+It allows you to perform operations like filtering, mapping, and reducing 
+on collections in a declarative and concise manner.
+
+Streams can only be used once. After a terminal operation the stream is closed.
+
+### Intermediate Operations
+Do not change the original stream. return a new stream and are lazy (they are not executed until a terminal operation is called)
+Such as `filter`, `map`, `sorted`
+
+### Terminal Operations
+Trigger the processing of the stream and consume it. modify the original stream. 
+(You cannot use the stream again after a terminal operation).
+Such as `forEach`, `collect`, `reduce`, `count`
 
 # post-increment and pre-increment
 1) Pre-increment ( ++i ) increases the value of i before the value is used in an expression.
@@ -335,3 +385,4 @@ https://www.javatpoint.com/StringBuilder-class
 # intelliJ syntax shortcut and Tricks
 
     psvm to create main method
+    sout to create System.out.println();
