@@ -254,6 +254,21 @@ Trigger the processing of the stream and consume it. modify the original stream.
 (You cannot use the stream again after a terminal operation).
 Such as `forEach`, `collect`, `reduce`, `count`
 
+# Java memory
+Heap is the region where objects are stored
+Garbage collection automatically reclaim memory occupied by objects that are no longer in use(basiclly remove an object that have nor references to the stack).
+JVM tuning : you can use visual VM or java vision control to improve the performance you an adjust heap sizes, select appropriate Garbage collection algorithm for your application
+
+Stack is the area where method calls, local variables, and references to objects
+on the heap stored.
+Stack is deallocated automatically
+
+Metaspace is the region where class info such as class names, method names, field names is stored
+
+# Concurrency and Multithreading
+
+thread is mini-process, the smallest unit of scheduled execution.
+
 # post-increment and pre-increment
 1) Pre-increment ( ++i ) increases the value of i before the value is used in an expression.
 2) Post-increment ( i++ ) increases the value after the expression is evaluated.
