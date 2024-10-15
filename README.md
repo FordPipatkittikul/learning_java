@@ -203,6 +203,8 @@ and manipulate collections of object.
     2) Set: unordered and the elements don't have an index
     3) Queue: add to the end and remove from the front ex. line of shopping.(FIFO)
     4) Map
+### ConcurrentModificationException
+https://chatgpt.com/share/6709625d-1b00-800b-a1d6-b77b25c3d11d
 
 # Enums
 https://www.w3schools.com/java/java_enums.asp
@@ -267,7 +269,27 @@ Metaspace is the region where class info such as class names, method names, fiel
 
 # Concurrency and Multithreading
 
+https://www.w3schools.com/java/java_threads.asp
 thread is mini-process, the smallest unit of scheduled execution.
+Each thread has its own stack but share heap space
+
+# Concurrency problems
+
+when multiple threads (or a thread and the main program) try to access and modify shared variables simultaneously. 
+Since threads can run in parallel, there's no guaranteed order in which they execute. 
+This leads to race conditions, where the outcome depends on which thread reads or writes a variable first.
+
+**ways to fix**:
+1 Atomic Classes: provide a thread-safe way to perform operations on variables without the need for explicit synchronization.
+https://chatgpt.com/share/67095ba8-3710-800b-b208-4a3e5bab208a
+
+2 Synchronization: one at a time
+https://chatgpt.com/share/67095ba8-3710-800b-b208-4a3e5bab208a
+
+3 Executor-service: Allows us to manage asynchronous task execution
+
+Deadlock
+https://chatgpt.com/share/67098b08-700c-800b-9f3d-a21efc4a6ca5
 
 # post-increment and pre-increment
 1) Pre-increment ( ++i ) increases the value of i before the value is used in an expression.
