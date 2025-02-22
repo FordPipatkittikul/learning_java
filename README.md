@@ -420,3 +420,5 @@ https://www.javatpoint.com/StringBuilder-class
 
     psvm to create main method
     sout to create System.out.println();
+
+    navigate inside that class `Ctrl + Shift + N`
