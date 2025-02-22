@@ -37,13 +37,13 @@ Best practice: choose the most restrictive access modifier that is appropriate
 3) Default : No modifier. Accessible from anywhere within the same package
 4) Private : Accessible from anywhere within the same class
 
-### Static
+## Static
 
 **The static keyword** is a non-access modifier used for methods and attributes.
 Static methods/attributes can be accessed without creating an object of a class.
 because It belongs to the class.
 
-### final
+## final
 - When class is final, it cannot be extended.
 - When method is final, it cannot be overridden.
 - final variable can only be assign value once.
@@ -52,11 +52,11 @@ https://www.w3schools.com/java/java_modifiers.asp
 
 # Method
 
-### return type
+## return type
     
     void : return nothing
 
-### parameter and argument
+## parameter and argument
 
     public class Main {
         static void myMethod(String fname) { // parameters
@@ -71,7 +71,7 @@ https://www.w3schools.com/java/java_modifiers.asp
     
     }
 
-### getter and setter method
+## getter and setter method
 
     The get method returns the variable value, and the set method sets the value.
     https://www.w3schools.com/java/java_encapsulation.asp
@@ -97,16 +97,17 @@ Packages are divided into two categories:
 # Variables
 
 2 types of variables
+
 1) Primitive types for primitive values
 2) Reference types for objects
 
-1) Primitive data types - includes byte, short, int, long, float, double, boolean and char
+## Primitive data types - includes byte, short, int, long, float, double, boolean and char
 (https://www.w3schools.com/java/java_data_types.asp)
 
 - For java, primitive type comparison can be done by ==
 - Are immutable, but it doesn't mean you can change though just a new one get created when you override its value
 
-2) Reference type - includes Class(any build in class such as String, Integer, Double, Boolean, Object, ArrayList), Array and Interface
+## Reference type - includes Class(any build in class such as String, Integer, Double, Boolean, Object, ArrayList), Array and Interface
 
 - For reference types (such as objects), the == operator compares references rather than the actual content of the objects. 
 This means it checks whether two variables point to the same object in memory, 
@@ -117,7 +118,7 @@ not whether their contents are equal.
 - UpperCase is a reference type
 - Lowercase is a primitive type
 
-### casting
+## casting
 
 Two types of casting:
 1) Widening Casting (automatically) - converting a smaller type to a larger type size
@@ -126,28 +127,24 @@ https://www.w3schools.com/java/java_type_casting.asp
 
 # OOP
 
-### Inheritance
+## Inheritance
 The ability of a class to inherit properties and methods from a parent class.
 Benefit: avoid duplicate code
 
-### Encapsulation
+## Encapsulation
 Binding all data and methods together in one object.
 Benefit: make sure that "sensitive" data is hidden from users.
 https://www.w3schools.com/java/java_encapsulation.asp
 
-### Abstraction
+## Abstraction
 abstract all the difficult things. Only show user necessary things. hiding away the unnecessary details.
 
-### Polymorphism
+## Polymorphism
 Many forms. Methods with the same name that can be executed on many objects or classes.
 
-### hiding
-Static members with the same name in parent and child class.
+## Overriding, Overloading and Hiding
 
-### Overriding, Overloading and Hiding
-
-@override
-**Overriding** : new implementation for a method that is inherited from a parent class.
+**Overriding** : new implementation for a method that is inherited from a parent class. `@override`
 **Overloading** : Providing multiple methods with the same name, but different signatures due to parameter list
 
 # Interfaces
@@ -203,7 +200,7 @@ and manipulate collections of object.
     2) Set: unordered and the elements don't have an index
     3) Queue: add to the end and remove from the front ex. line of shopping.(FIFO)
     4) Map
-### ConcurrentModificationException
+## ConcurrentModificationException
 https://chatgpt.com/share/6709625d-1b00-800b-a1d6-b77b25c3d11d
 
 # Enums
