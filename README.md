@@ -1,6 +1,6 @@
-# Key Concepts and Terms
+# 1 Key Concepts and Terms
 
-# Class
+# 1.1 Class
 
 Class is a blueprint to create objects.
 
@@ -12,7 +12,7 @@ Variables that belong to an object are usually called **attributes**
 
 - superclass (parent) - the class being inherited from
 
-# Constructors
+# 1.2 Constructors
 
 Used to create an object of a class. It has the same name as the class.
 It used to initialize instance variables of the object.
@@ -23,10 +23,10 @@ Every java have a constructor if you don't create it will be default constructor
 
 Constructors have no return type
 
-**super()** for call a constructor in the parent class.
+**super()** for call a constructor in the parent class. benefit: 1) Using super to Access Parent Class Variables 2) Using super to Call Parent Method 3) Using super() to Call Parent Constructor.
 **this()** for call another constructor in its own class.
 
-# Access Modifiers
+# 1.3 Access Modifiers
 
 keyword to control the visibility and accessibility of the class members.
 Attributes, methods, constructors and other classes.
@@ -37,26 +37,26 @@ Best practice: choose the most restrictive access modifier that is appropriate
 3) Default : No modifier. Accessible from anywhere within the same package
 4) Private : Accessible from anywhere within the same class
 
-## Static
+## 1.4 Static
 
 **The static keyword** is a non-access modifier used for methods and attributes.
 Static methods/attributes can be accessed without creating an object of a class.
 because It belongs to the class.
 
-## final
+## 1.5 final
 - When class is final, it cannot be extended.
 - When method is final, it cannot be overridden.
 - final variable can only be assign value once.
 
 https://www.w3schools.com/java/java_modifiers.asp
 
-# Method
+# 2 Method
 
-## return type
+## 2.1 return type
     
     void : return nothing
 
-## parameter and argument
+## 2.2 parameter and argument
 
     public class Main {
         static void myMethod(String fname) { // parameters
@@ -71,12 +71,12 @@ https://www.w3schools.com/java/java_modifiers.asp
     
     }
 
-## getter and setter method
+## 2.3 getter and setter method
 
     The get method returns the variable value, and the set method sets the value.
     https://www.w3schools.com/java/java_encapsulation.asp
 
-# Object/instance
+# 3 Object/instance
 
 An object is created from a class.
 
@@ -84,7 +84,7 @@ An object is created from a class.
 
 Are mutable by default
 
-# Packages
+# 4 Packages
 
 Always start with the package statement as the first executable statement of the Java file
 
@@ -94,20 +94,20 @@ Packages are divided into two categories:
 1) Built-in Packages (packages from the Java API) such as Scanner
 2) User-defined Packages (create your own packages)
 
-# Variables
+# 5 Variables
 
 2 types of variables
 
 1) Primitive types for primitive values
 2) Reference types for objects
 
-## Primitive data types - includes byte, short, int, long, float, double, boolean and char
+## 5.1 Primitive data types - includes byte, short, int, long, float, double, boolean and char
 (https://www.w3schools.com/java/java_data_types.asp)
 
 - For java, primitive type comparison can be done by ==
 - Are immutable, but it doesn't mean you can change though just a new one get created when you override its value
 
-## Reference type - includes Class(any build in class such as String, Integer, Double, Boolean, Object, ArrayList), Array and Interface
+## 5.2 Reference type - includes Class(any build in class such as String, Integer, Double, Boolean, Object, ArrayList), Array and Interface
 
 - For reference types (such as objects), the == operator compares references rather than the actual content of the objects. 
 This means it checks whether two variables point to the same object in memory, 
@@ -118,36 +118,36 @@ not whether their contents are equal.
 - UpperCase is a reference type
 - Lowercase is a primitive type
 
-## casting
+## 5.3 casting
 
 Two types of casting:
 1) Widening Casting (automatically) - converting a smaller type to a larger type size
 2) Narrowing Casting (manually) - converting a larger type to a smaller size type
 https://www.w3schools.com/java/java_type_casting.asp
 
-# OOP
+# 6 OOP
 
-## Inheritance
+## 6.1 Inheritance
 The ability of a class to inherit properties and methods from a parent class.
 Benefit: avoid duplicate code
 
-## Encapsulation
+## 6.2 Encapsulation
 Binding all data and methods together in one object.
 Benefit: make sure that "sensitive" data is hidden from users.
 https://www.w3schools.com/java/java_encapsulation.asp
 
-## Abstraction
+## 6.3 Abstraction
 abstract all the difficult things. Only show user necessary things. hiding away the unnecessary details.
 
-## Polymorphism
+## 6.4 Polymorphism
 Many forms. Methods with the same name that can be executed on many objects or classes.
 
-## Overriding, Overloading and Hiding
+## 6.5 Overriding, Overloading and Hiding
 
 **Overriding** : new implementation for a method that is inherited from a parent class. `@override`
 **Overloading** : Providing multiple methods with the same name, but different signatures due to parameter list
 
-# Interfaces
+# 7 Interfaces
 https://www.w3schools.com/java/java_interface.asp
 Contract for a class what specifies which methods a class should have.
 Most interface method does not have a body, but It can have a body
@@ -155,7 +155,7 @@ Most interface method does not have a body, but It can have a body
 When you implement an interface in Java, 
 you must provide implementations for all the abstract methods declared in that interface.
 
-### default method
+## 7.1 default method
 It is a method that has a default implementation in the interface.
 Class that implement an interface with a default body, don't need to
 implement the default methods. But It is allowed to override it.
@@ -168,7 +168,7 @@ implement the default methods. But It is allowed to override it.
         }
     }
 
-### functional interfaces
+### 7.2 functional interfaces
 Functional interfaces can have more than one method, but only one abstract method.
     
     @FunctionalInterface
@@ -176,7 +176,7 @@ Functional interfaces can have more than one method, but only one abstract metho
         int calculate(int a, int b);
     }
 
-# Abstract
+# 8 Abstract
 https://www.w3schools.com/java/java_abstract.asp
 
 abstraction is the process of hiding certain details and showing only essential information to the user.
@@ -187,7 +187,7 @@ Abstract class: is a restricted class that cannot be used to create objects or i
 Abstract method: can only be used in an abstract class, and it does not have a body. 
 The body is provided by the subclass (inherited from). Abstract method can be only exist in abstract class.
 
-# Generics and collections
+# 9 Generics and collections
 
 generic can be replaced by any object type not primitive type. For type safety
 
@@ -200,10 +200,9 @@ and manipulate collections of object.
     2) Set: unordered and the elements don't have an index
     3) Queue: add to the end and remove from the front ex. line of shopping.(FIFO)
     4) Map
-## ConcurrentModificationException
-https://chatgpt.com/share/6709625d-1b00-800b-a1d6-b77b25c3d11d
+    
 
-# Enums
+# 10 Enums
 https://www.w3schools.com/java/java_enums.asp
 Special type of Class that has a fixed number of instances. Set of named constants(unchangeable).
 Values of the enum are written in UPPERCASE.
@@ -213,14 +212,14 @@ Enums with member
 
 ![enums.png](enums.png)
 
-# lambda expressions
+# 11 lambda expressions
 A lambda expression is a way of implementing a functional interface
 https://www.w3schools.com/java/java_lambda.asp
 
 Variable using in lambda expression should be final or effectively final.
 
 
-## useful built in functional expressions
+## 11.1 useful built in functional expressions
 1. Consumer<T>
    T get()
    Purpose: Represents an operation that accepts a single input argument and returns no result.
@@ -234,7 +233,7 @@ Variable using in lambda expression should be final or effectively final.
    Predicate<Integer> isEven = n -> n % 2 == 0;
    System.out.println(isEven.test(4)); // Output: true
 
-# Streams API & functional programming
+# 12 Streams API & functional programming
 Stream: A sequence of elements from a data source (e.g., collections, arrays) 
 that can be processed in a pipeline.
 
@@ -244,16 +243,16 @@ on collections in a declarative and concise manner.
 
 Streams can only be used once. After a terminal operation the stream is closed.
 
-### Intermediate Operations
+### 12.1 Intermediate Operations
 Do not change the original stream. return a new stream and are lazy (they are not executed until a terminal operation is called)
 Such as `filter`, `map`, `sorted`
 
-### Terminal Operations
+### 12.2 Terminal Operations
 Trigger the processing of the stream and consume it. modify the original stream. 
 (You cannot use the stream again after a terminal operation).
 Such as `forEach`, `collect`, `reduce`, `count`
 
-# Java memory
+# 13 Java memory
 Heap is the region where objects are stored
 Garbage collection automatically reclaim memory occupied by objects that are no longer in use(basiclly remove an object that have nor references to the stack).
 JVM tuning : you can use visual VM or java vision control to improve the performance you an adjust heap sizes, select appropriate Garbage collection algorithm for your application
@@ -264,13 +263,13 @@ Stack is deallocated automatically
 
 Metaspace is the region where class info such as class names, method names, field names is stored
 
-# Concurrency and Multithreading
+# 14 Concurrency and Multithreading
 
 https://www.w3schools.com/java/java_threads.asp
 thread is mini-process, the smallest unit of scheduled execution.
 Each thread has its own stack but share heap space
 
-# Concurrency problems
+# 15 Concurrency problems
 
 when multiple threads (or a thread and the main program) try to access and modify shared variables simultaneously. 
 Since threads can run in parallel, there's no guaranteed order in which they execute. 
@@ -288,11 +287,11 @@ https://chatgpt.com/share/67095ba8-3710-800b-b208-4a3e5bab208a
 Deadlock
 https://chatgpt.com/share/67098b08-700c-800b-9f3d-a21efc4a6ca5
 
-# post-increment and pre-increment
+# 16 post-increment and pre-increment
 1) Pre-increment ( ++i ) increases the value of i before the value is used in an expression.
 2) Post-increment ( i++ ) increases the value after the expression is evaluated.
 
-# Exceptions
+# 17 Exceptions
 https://www.w3schools.com/java/java_try_catch.asp
 When an error occurs, Java will normally stop and generate an error message. 
 The technical term for this is: Java will throw an exception (throw an error).
